@@ -16,6 +16,7 @@ namespace Assets
 
         void Start()
         {
+            transform.position = rangedUnit.transform.position - Vector3.forward * 10f;
             this.NUM_RESOURCES = 1;
             this.ATTACK = true;
             //finds MeleeUnit
@@ -48,22 +49,43 @@ namespace Assets
                 this.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(refillHeading)
                 , 10 * Time.deltaTime);
                 this.transform.Translate(Vector3.forward * Time.deltaTime * this.SPEED);
-                if(Vector3.Distance(this.MeleeUnit.transform.position, this.transform.position)<5.0f)
+                if (Vector3.Distance(this.MeleeUnit.transform.position, this.transform.position) < 5.0f)
                 {
-                    if (this.NUM_RESOURCES>0)
+                    if (this.NUM_RESOURCES > 0)
                     {
-                        if(this.endTime<Time.time)
+                        if (this.endTime < Time.time)
                         {
                             //
                         }
-                        else 
+                        else
                         {
                             ;
                         }
                     }
                 }
             }
+            if (ATTACK == true)
+            {
+                Health = Health - 25;
+            }
+            else if (ATTACK == false)
+            {
+                nextMove = 1;
+            }
+        }
+
+        public bool isdead()
+        {
+            if (Health < +0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }
+
 

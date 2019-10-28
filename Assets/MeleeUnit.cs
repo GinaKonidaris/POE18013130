@@ -16,6 +16,7 @@ namespace Assets
 
         void Start()
         {
+            transform.position = MeleeUnit.transform.position - Vector3.forward * 10f;
             //starts meleeunit with resource
             this.NUM_RESOURCES = 1;
             //tells meleeunit to attack
@@ -64,6 +65,27 @@ namespace Assets
                         }
                     }
                 }
+            }
+
+            if( ATTACK == true)
+            {
+                Health = Health - 25;
+            }
+            else if(ATTACK== false)
+            {
+                nextMove = 1;
+            }
+        }
+
+        public bool isdead()
+        {
+            if (Health < +0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
             }
         }
     }

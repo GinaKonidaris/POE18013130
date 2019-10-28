@@ -63,10 +63,12 @@
   <ItemGroup>
     <Compile Include="Assets\Building.cs" />
     <Compile Include="Assets\BuildingResources.cs" />
+    <Compile Include="Assets\Map.cs" />
     <Compile Include="Assets\MeleeUnit.cs" />
     <Compile Include="Assets\POE18013130GinaKonidaris.cs" />
     <Compile Include="Assets\RangedUnit.cs" />
     <Compile Include="Assets\Unit.cs" />
+    <Compile Include="Assets\Wizard.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/User/Documents/POE1801313OGinaKonidarus/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

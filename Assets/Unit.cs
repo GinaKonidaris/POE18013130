@@ -15,6 +15,8 @@ namespace Assets
         public GameObject MeleeUnit;
         public GameObject MyResources;
         public GameObject Attacking;
+        public int Health = 100;
+        public int Attack = 25;
 
 
         public int NUM_RESOURCES;

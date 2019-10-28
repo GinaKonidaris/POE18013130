@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,7 +17,7 @@ public class POE18013130GinaKonidaris : MonoBehaviour {
         Vector3 pos = new Vector3(this.transform.position.x + 1, 2,this.transform.position.z + 1);
         this.BuildingRescoures = GameObject.Instantiate(this.BuildingFactory, pos, this.transform.rotation) as GameObject;
         this.BuildingRescoures.GetComponent<Building>().mystorage = this.gameObject;
-        this.Unit = GameObject.FindGameObjectsWithTag("Unit") as GameObject;
+        this.Unit = GameObject.FindGameObjectsWithTag("MeleeUnit") as GameObject;
 	}
 	
 	// Update is called once per frame
