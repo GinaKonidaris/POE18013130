@@ -43,7 +43,28 @@ namespace Assets
             {
                 this.ATTACK = false;
             }
-
+            if (this.ATTACK)
+            {
+                Vector3 refillHeading = this.meleeUnit.transform.position - this.transform.position; refillHeading.Normalize();
+                // use Quaternion Slerp function to make smooth transition ... 
+                this.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(refillHeading)
+                , 10 * Time.deltaTime);
+                this.transform.Translate(Vector3.forward * Time.deltaTime * this.SPEED);
+                if (Vector3.Distance(this.MeleeUnit.transform.position, this.transform.position) < 5.0f)
+                {
+                    if (this.NUM_RESOURCES > 0)
+                    {
+                        if (this.endTime < Time.time)
+                        {
+                            //
+                        }
+                        else
+                        {
+                            ;
+                        }
+                    }
+                }
+            }
         }
     }
 }

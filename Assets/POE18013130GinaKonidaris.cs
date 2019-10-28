@@ -27,7 +27,7 @@ public class POE18013130GinaKonidaris : MonoBehaviour {
         }
         else if(this.EndTimer == 0.0f)
         {
-            ; // Do nothing
+            ; 
         }
         else
         {
